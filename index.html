@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Shreya 🎉</title>
+  
+  <!-- Luxury Stylish Font -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display+SC:wght@700&display=swap');
+  </style>
+  
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Playfair Display SC', serif;
+      background: linear-gradient(135deg, #ffccd5, #f7a6c1, #fddde6);
+      background-size: 300% 300%;
+      animation: gradientBG 12s ease infinite;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Navbar */
+    nav {
+      width: 100%;
+      padding: 15px 0;
+      background: rgba(255, 102, 178, 0.25);
+      backdrop-filter: blur(6px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    nav h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #fff;
+      margin: 0;
+      text-shadow: 0 0 10px #ff99cc, 0 0 20px #ff66b2, 0 0 40px #ff3385;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 15px #ff99cc, 0 0 30px #ff66b2; }
+      to { text-shadow: 0 0 25px #ff3385, 0 0 50px #ff1a75; }
+    }
+
+    /* Content Wrapper */
+    .content {
+      flex: 1;
+      padding-top: 110px;
+      padding-bottom: 50px;
+    }
+
+    /* Button */
+    .btn {
+      display: inline-block;
+      margin: 20px auto;
+      padding: 15px 25px;
+      border-radius: 40px;
+      background: #ff66b2;
+      color: white;
+      font-size: 1.1rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      background: #ff3385;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    /* Cake */
+    .cake {
+      display: none;
+      margin: 20px auto;
+      width: 220px;
+      max-width: 80%;
+      animation: popUp 1s ease;
+    }
+
+    @keyframes popUp {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Hidden Wish Section */
+    .wish-box {
+      margin: 30px auto;
+      padding: 25px;
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid #fff;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      display: none;
+      font-size: 1.3rem;
+      line-height: 1.6;
+      font-family: 'Great Vibes', cursive;
+      text-shadow: 0 0 8px #ff99cc;
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Card Section */
+    .card-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: transform 0.5s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: auto;
+      padding: 15px;
+      font-size: 1rem;
+      background: rgba(255, 51, 133, 0.85);
+      border-radius: 15px 15px 0 0;
+      box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    /* Floating Hearts */
+    .heart {
+      position: absolute;
+      bottom: -50px;
+      width: 20px;
+      height: 20px;
+      background: #ff4d88;
+      transform: rotate(-45deg);
+      animation: floatUp 8s linear infinite;
+      opacity: 0.8;
+    }
+
+    .heart:before,
+    .heart:after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ff4d88;
+      border-radius: 50%;
+    }
+
+    .heart:before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart:after {
+      left: 10px;
+      top: 0;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) rotate(-45deg); opacity: 1; }
+      100% { transform: translateY(-120vh) rotate(-45deg); opacity: 0; }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav h1 { font-size: 2.2rem; }
+      .btn { font-size: 1rem; padding: 12px 20px; }
+      .wish-box { font-size: 1.1rem; padding: 20px; }
+    }
+
+    @media (max-width: 480px) {
+      nav h1 { font-size: 1.7rem; }
+      .btn { font-size: 0.9rem; padding: 10px 18px; }
+      .wish-box { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>Happy Birthday Shreya 🎀</h1>
+  </nav>
+
+  <div class="content">
+    <!-- Surprise Cake -->
+    <button class="btn" onclick="showCake()">🎂 Click Me for a Surprise 🎂</button>
+    <img src="Happy Birthday 🎂🎈🥰.jpg" alt="Birthday Cake" class="cake" id="cake">
+
+    <!-- Hidden Wish -->
+    <button class="btn" onclick="showWish()">💌 Reveal Birthday Wish 💌</button>
+    <div class="wish-box" id="wishBox">
+      🎉 Happy Birthday Shreya! 🎉  
+      May your day sparkle with joy, laughter, and love. ✨💖  
+      You deserve all the happiness in the world today and always. 🌸🎂  
+    </div>
+
+    <!-- Photo Cards -->
+    <section class="card-section">
+      <div class="card"><img src="https://source.unsplash.com/400x400/?girl,pink" alt="Shreya Photo"></div>
+      <div class="card"><img src="https://source.unsplash.com/400x400/?birthday,cake" alt="Cake"></div>
+      <div class="card"><img src="https://source.unsplash.com/400x400/?friends,party" alt="Party"></div>
+      <div class="card"><img src="https://source.unsplash.com/400x400/?love,celebration" alt="Celebration"></div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    Made for SHREYA ||
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // Floating Hearts
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 3 + 5) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 8000);
+    }
+    setInterval(createHeart, 800);
+
+    // Show Cake
+    function showCake() {
+      const cake = document.getElementById("cake");
+      cake.style.display = "block";
+      cake.style.animation = "popUp 1s ease";
+    }
+
+    // Show Hidden Wish
+    function showWish() {
+      document.getElementById("wishBox").style.display = "block";
+    }
+  </script>
+</body>
+</html>
